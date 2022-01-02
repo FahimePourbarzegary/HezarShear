@@ -1,13 +1,12 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: "Rezvan";
+  font-weight: 900;
+  src: local("Rezvan"), url(./assets/fonts/Rezvan.ttf) format("opentype");
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: "Rezvan-fat";
+  font-weight: 900;
+  src: local("Rezvan-fat"),
+    url(./assets/fonts/Rezvan-fat.ttf) format("opentype");
 }
