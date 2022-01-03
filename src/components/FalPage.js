@@ -1,6 +1,26 @@
-import React from "react";
-
+import React, { useEffect, useState } from "react";
+const FalHafez_Api = "https://ganjgah.ir/api/ganjoor/hafez/faal";
 function FalPage() {
+  const [Fal, setFal] = useState([]);
+  const [Verses, setVerses] = useState([]);
+  const [music, setmusic] = useState([]);
+  useEffect(() => {
+    fetch(FalHafez_Api)
+      .then((res) => res.json())
+      .then((data) => {
+        setFal(data);
+        setVerses(data.verses);
+
+        setmusic(data.recitations[0].mp3Url);
+      });
+  }, []);
+
+  const loopVerses = Verses.map((verses, index) => (
+    <div className="byt" key={index}>
+      <p>{verses.text}</p>
+    </div>
+  ));
+
   return (
     <div className="FalPage">
       <a name="falhafez"></a>
@@ -8,57 +28,13 @@ function FalPage() {
         <div className="falContainer">
           <div className="fal">
             <div className="title">
-              <p> غزل شماره 28:</p>
+              <p>{Fal.title} </p>
             </div>
-            <div className="ghazaliat">
-              <div className="byt">
-                <p>شهریست پرظریفان و از هر طرف نگاری</p>
-              </div>
-              <div className="byt">
-                <p>شهریست پرظریفان و از هر طرف نگاری</p>
-              </div>
-              <div className="byt">
-                <p>شهریست پرظریفان و از هر طرف نگاری</p>
-              </div>
-              <div className="byt">
-                <p>شهریست پرظریفان و از هر طرف نگاری</p>
-              </div>
-              <div className="byt">
-                <p>شهریست پرظریفان و از هر طرف نگاری</p>
-              </div>
-              <div className="byt">
-                <p>شهریست پرظریفان و از هر طرف نگاری</p>
-              </div>
-              <div className="byt">
-                <p>شهریست پرظریفان و از هر طرف نگاری</p>
-              </div>
-              <div className="byt">
-                <p>شهریست پرظریفان و از هر طرف نگاری</p>
-              </div>
-              <div className="byt">
-                <p>شهریست پرظریفان و از هر طرف نگاری</p>
-              </div>
-              <div className="byt">
-                <p>شهریست پرظریفان و از هر طرف نگاری</p>
-              </div>
-              <div className="byt">
-                <p>شهریست پرظریفان و از هر طرف نگاری</p>
-              </div>
-              <div className="byt">
-                <p>شهریست پرظریفان و از هر طرف نگاری</p>
-              </div>
-              <div className="byt">
-                <p>شهریست پرظریفان و از هر طرف نگاری</p>
-              </div>
-              <div className="byt">
-                <p>شهریست پرظریفان و از هر طرف نگاری</p>
-              </div>
-            </div>
+            <div className="ghazaliat">{loopVerses}</div>
           </div>
+
           <div className="audio">
-            <audio controls autoplay>
-              <source src="horse.mp3" type="audio/mpeg" />
-            </audio>
+            <audio controls src={music}></audio>
           </div>
         </div>
         <div className="maniFal">
