@@ -280,8 +280,8 @@ a {
 .shaeranlist {
   position: absolute;
   height: 35%;
-  width: 94%;
-  margin-left: 6%;
+  width: 90%;
+  margin-left: 10%;
   margin-top: 28%;
   background-color: transparent;
   overflow-x: auto;
@@ -320,23 +320,24 @@ a {
   background-color: rgb(255, 255, 255);
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 21px;
   text-align: center;
   font-family: Rezvan, "Segoe UI", Tahoma, Geneva, Verdana;
   color: #171717;
 }
 .scrollbutton {
+  position: absolute;
   width: 5%;
   height: 15%;
   margin-left: 5%;
-  display: inline-block;
   margin-right: 5%;
 }
 .npbutton {
+  margin-top: 850%;
   border: none;
-  width: 50%;
-  height: 80%;
+  width: 30%;
+  height: 20%;
   border-radius: 50%;
   text-decoration: none;
   background-color: #6788be;
@@ -346,4 +347,55 @@ a {
   align-items: center;
   align-content: center;
   text-align: center;
+}
+@media only screen and (max-height: 500px) {
+  .contextMain {
+    font-size: 90%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .buttonContainer {
+    padding-top: 3%;
+  }
+  .imagemainpage {
+    padding-top: 5%;
+  }
+  .contextMain {
+    font-size: 90%;
+    padding-top: 10%;
+  }
+  .buttonstyle {
+    font-size: 50%;
+  }
+  .contextMain {
+    padding-top: 20%;
+    font-size: 70%;
+  }
+  .maniiFal {
+    font-size: 60%;
+  }
+  .buttonFal {
+    font-size: 60%;
+  }
+  .byt {
+    width: 50%;
+    font-size: 50%;
+  }
+  .backbutton {
+    background-color: #ecc75b;
+    border: none;
+    width: 40%;
+    height: 70%;
+    margin-right: 10%;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+    text-align: center;
+    font-family: Rezvan, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0px 4px 5px rgba(196, 196, 196, 0.38);
+    cursor: pointer;
+  }
 }

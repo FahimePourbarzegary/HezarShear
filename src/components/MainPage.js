@@ -1,5 +1,5 @@
 import React from "react";
-import tarh from "./../assets/images/backdesign.svg";
+
 import logo from "./../assets/images/logo.svg";
 import imagemainPage from "./../assets/images/imagemainPage.svg";
 
@@ -10,7 +10,6 @@ function MainPage() {
         <a name="MainPage"></a>
         <img src={logo} alt="logo" className="logo" />
 
-        <img src={tarh} alt="tarh" className="tarh" />
         <div className="navbar">
           <button
             className="navbarbutton"
@@ -35,7 +34,7 @@ function MainPage() {
         <div className="mainContent">
           <img
             src={imagemainPage}
-            alt="imagemainpage"
+            alt="imagemainPage"
             className="imagemainpage"
           />
           <div className="contextContainer">
