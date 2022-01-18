@@ -32,6 +32,7 @@ function Ashaar() {
         setganjoorMetre(data.ganjoorMetre);
         setShear(data);
       });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   const loopVerses = Verses.map((verses, index) => (
     <div className="byt" key={index}>
@@ -63,7 +64,9 @@ function Ashaar() {
 
   return (
     <>
-      <a name="ganjineAshar"></a>
+      <a href="/#" name="ganjineAshar">
+        {" "}
+      </a>
       <div className="AsharPage">
         {ShowData ? null : (
           <>
@@ -115,6 +118,7 @@ function Ashaar() {
                 onClick={() => {
                   setShowData(false);
                 }}
+                href="/#"
               >
                 بازگشت
               </a>

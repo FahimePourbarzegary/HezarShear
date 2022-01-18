@@ -24,7 +24,9 @@ function FalPage() {
   return (
     <>
       <div className="FalPage">
-        <a name="falhafez"></a>
+        <a name="falhafez" href="/#">
+          {" "}
+        </a>
         <div className="mainCard">
           <div className="falContainer">
             <div className="fal">
