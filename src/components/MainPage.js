@@ -7,7 +7,9 @@ function MainPage() {
   return (
     <>
       <div className="MainPage">
-        <a name="MainPage"></a>
+        <a name="MainPage" href="/">
+          {" "}
+        </a>
         <img src={logo} alt="logo" className="logo" />
 
         <div className="navbar">
