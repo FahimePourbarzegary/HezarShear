@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
-import imageSaher from "./../assets/images/moulavi.gif";
 import tarh2 from "./../assets/images/tarhAsharPage2.png";
 import tarh from "./../assets/images/tarhAshaarPage.svg";
-import rahi from "./../assets/images/rahi.gif";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faSyncAlt,
@@ -20,28 +18,6 @@ function Ashaar() {
   const [shaer, setShaer] = useState([]);
   const [ganjoorMetre, setganjoorMetre] = useState([]);
   const [img, setImg] = useState([]);
-  const id_shaer = [
-    "https://ganjgah.ir/api/ganjoor/poet/5",
-    "https://ganjgah.ir/api/ganjoor/poet/28",
-    "https://ganjgah.ir/api/ganjoor/poet/7",
-    "https://ganjgah.ir/api/ganjoor/poet/22",
-    "https://ganjgah.ir/api/ganjoor/poet/26",
-    "https://ganjgah.ir/api/ganjoor/poet/3",
-    "https://ganjgah.ir/api/ganjoor/poet/2",
-    "https://ganjgah.ir/api/ganjoor/poet/25",
-    "https://ganjgah.ir/api/ganjoor/poet/33",
-    "https://ganjgah.ir/api/ganjoor/poet/31",
-    "https://ganjgah.ir/api/ganjoor/poet/34",
-    "https://ganjgah.ir/api/ganjoor/poet/29",
-    "https://ganjgah.ir/api/ganjoor/poet/40",
-    "https://ganjgah.ir/api/ganjoor/poet/32",
-    "https://ganjgah.ir/api/ganjoor/poet/21",
-    "https://ganjgah.ir/api/ganjoor/poet/35",
-    "https://ganjgah.ir/api/ganjoor/poet/20",
-    "https://ganjgah.ir/api/ganjoor/poet/19",
-    "https://ganjgah.ir/api/ganjoor/poet/41",
-  ];
-
   useEffect(() => {
     fetch(Shaer_Api)
       .then((res) => res.json())
